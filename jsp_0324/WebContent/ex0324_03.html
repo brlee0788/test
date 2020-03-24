@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<form action="" name="ex01" method="get">
+			<label>이름</label>
+			<input type="text" name="e_name" id="e_name"><br>
+			<label>숫자 1</label>
+			<input type="text" name="num1" id="num1"><br>
+			<label>숫자 2</label>
+			<input type="text" name="num2" id="num2"><br>
+			<label>숫자 3</label>
+			<input type="text" name="num3" id="num3"><br>
+			<label>숫자 4</label>
+			<input type="text" name="num4" id="num4"><br>
+			
+			<input type="button" onclick="check()" value="결과값 확인">		
+<!-- 			<input type="button" onclick="add(ex01.num1.value, ex01.num2.value, ex01.num3.value, ex01.num4.value)" value="더하기"> -->
+<!-- 			<input type="button" onclick="mult(ex01.num1.value, ex01.num2.value, ex01.num3.value, ex01.num4.value)" value="곱하기"> -->
+			
+		</form>
+	
+	
+		<script type="text/javascript">
+
+		// form
+		// 이름 - 국문만 가능 (1자리 이상)
+		// 숫자 1 - 숫자만 1자리, 숫자 2-2자리, 숫자 3 - 3자리, 숫자4 - 4자리 이하
+		// 함수로 add, multi
+		
+		function check(){
+			var name_check = /^[가-힣]{1,}$/;
+			var num_check = /^[0-9]{1,}$/;
+			var num1 = parseInt(ex01.num1.value);
+			var num2 = parseInt(ex01.num2.value);
+			var num3 = parseInt(ex01.num3.value);
+			var num4 = parseInt(ex01.num4.value);
+			
+			if(!(name_check.test(ex01.e_name.value))){
+				alert('이름은 국문만으로 1자 이상 입력이 가능합니다.');
+				ex01.e_name.focus();
+				return false;
+			}
+			
+			if(!(num_check.test(ex01.num1.value))){
+				alert('숫자만 입력 가능합니다.');
+				ex01.num1.focus();
+				return false;
+			}
+			
+			if(!(num_check.test(ex01.num2.value))){
+				alert('숫자만 입력 가능합니다.');
+				ex01.num2.focus();
+				return false;
+			}
+			
+			if(!(num_check.test(ex01.num3.value))){
+				alert('숫자만 입력 가능합니다.');
+				ex01.num3.focus();
+				return false;
+			}
+			
+			if(!(num_check.test(ex01.num4.value))){
+				alert('숫자만 입력 가능합니다.');
+				ex01.num4.focus();
+				return false;
+			}
+			
+			var total = add(num1,num2,num3,num4);
+			var total2 = mult(num1,num2,num3,num4);
+			
+			document.write('4개 숫자의 합: '+total+"<br>");
+			document.write('4개 숫자의 곱: '+total2+"<br>");
+		}
+		
+		function add(a,b,c,d){
+			return a+b+c+d;
+		}
+		
+		function mult(a,b,c,d){
+			return a*b*c*d;
+		}
+		
+// 		function add(){
+// 			var i,sum=0;
+// 			for(i=0;i<arguments.length;i++){
+// 				sum += parseInt(arguments[i]);
+// 			}
+// 			document.write('4개 숫자의 합: '+sum+"<br>");
+// 		}
+		
+// 		function mult(){
+// 			var i=0;
+// 			var mul=1;
+// 			for(i=0;i<arguments.length;i++){
+// 				mul = mul* parseInt(arguments[i]);
+// 			}
+// 			document.write('4개 숫자의 곱: '+mul+"<br>");
+// 		}
+		
+//------------------------------------------------------------------------------------		
+		
+// 			function add(){
+// 				var i,sum=0;
+// 				for(i=0;i<arguments.length;i++){
+// 					sum +=arguments[i];
+// 					document.write('매개변수 '+i+' 값: '+arguments[i]+"<br>");
+// 				}
+// 				document.write('최종 결과 값: '+sum+'<br>');
+// 				document.write("---------------<br>");
+// 			}
+			
+// 			add(2,3);
+// 			add(2,3,4);
+// 			add(4,5,6,7,8);
+// 			add(1,2,3,4,5,6,7,8,9);
+			
+		
+// 			function add(x,y,z){
+// 				var sum=0;
+				
+// 				if((x===undefined)&&(y===undefined)&&(z===undefined)){
+// 					sum = 1;
+// 				}else if((y===undefined)&&(z===undefined)){
+// 					sum = x+1;
+// 				}else if(z===undefined){
+// 					sum = x+y;
+// 				}else {
+// 					sum = x+y+z;
+// 				}
+// 				return sum;
+// 			}
+		
+// 			function add(){
+// 				var sum = 1;
+// 				return sum;
+// 			}
+		
+// 			function add(x){
+// 				var sum = x+1;
+// 				return sum;
+// 			}
+			
+// 			function add(x,y){
+// 				var sum = x+y;
+// 				return sum;
+// 			}
+			
+// 			function add(x,y,z){
+// 				var sum = x+y+z;
+// 				return sum;
+// 			}
+			
+// 			var r0 = add();
+// 			var r1 = add(1);
+// 			var r2 = add(2,3);
+// 			var r3 = add(4,5,6);
+// 			var r4 = add(7,8,9,10);
+			
+// 			document.write('결과 값: '+r0+'<br>'); //null
+// 			document.write('결과 값: '+r1+'<br>'); //null
+// 			document.write('결과 값: '+r2+'<br>'); //null
+// 			document.write('결과 값: '+r3+'<br>'); //15
+// 			document.write('결과 값: '+r4+'<br>'); //24
+			
+		
+// -------------------------------------------------------------------------------		
+		
+// 			function add(x,y){
+// 				return x+y;
+// 			}
+			
+// 			var a1 = add;  // 변수에 함수를 넣을 수 있음
+// 			var a2 = add;
+			
+// 			document.write('결과 값: '+a1(10,100)+'<br>');
+// 			document.write('결과 값: '+a2(40,50)+'<br>');		
+		
+		
+// -------------------------------------------------------------------------------		
+		
+// 		var result;
+// 		function add(name,n){
+// 			document.write(name+'학생이 1부터 '+n+'까지 덧셈 수행<br>');
+// 			var sum=0;
+			
+// 			for(var i=1; i<n; i++){
+// 				sum +=i;
+// 			}
+// 			return sum;
+// 		}
+		
+// 		result = add("홍길동", 10);
+// 		document.write('결과 값: '+result+'<br>');
+// 		result = add("강감찬", 100);
+// 		document.write('결과 값: '+result+'<br>');
+
+
+
+// -------------------------------------------------------------------------------
+
+		// add2 -> 10~150까지 더하기
+		// mul -> 두 수의 곱하기
+		
+// 		var result1;
+// 		var result2;
+		
+// 		function add2(num1,num2){
+// 			var sum=0;
+		
+// 			for(var i=num1; i<=num2; i++){
+// 				sum +=i;
+// 			}
+// 			return sum;
+// 		}
+		
+// 		function mul(a,b){
+// 			return a*b;
+// 		}
+		
+// 		result1 = add2(10,150);
+// 		document.write('10~150까지의 합: '+result1+'<br>');
+// 		result2 = mul(10,150);
+// 		document.write('두 수의 곱: '+ result2);
+		
+		
+// -------------------------------------------------------------------------------		
+		
+		
+// 		var text1 = "함수 선언 전 호출 에러";
+// 		var text2 = "함수 선언 후 호출만 가능 ";
+		
+// // 		printMsg(text1);    //무명함수는 함수 선언 전에 호출이 불가능 (아직 변수에 함수가 입력되어 있지 않아서)
+// 		var printMsg = function(msg){
+// 			document.write('함수 호출 메시지: '+msg+'<br>');
+// 		}
+		
+// 		printMsg(text2);
+	
+		// 함수명이 같은 기본 함수와 무명함수가 있는 경우, 무명함수가 먼저 호출된다.
+		
+		
+// 		function printMsg(name,age){
+// 					document.write('당신의 이름은 '+name+'<br>');
+// 					document.write('당신의 나이는 '+age+'<br>');
+// 			}
+			
+			
+			
+		</script>
+<!-- 		<button onclick="printMsg('홍길동', 21)">학생정보</button> -->
+	</body>
+</html>

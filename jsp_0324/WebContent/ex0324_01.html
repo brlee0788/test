@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/custom.js"></script>
+	</head>
+	<body>
+		<form action="http://www.naver.com" name="join" method="get">
+			<label>아이디</label>
+			<input type="text" name="j_id" id="j_id"><br>
+			<label>패스워드</label>
+			<input type="password" name="j_pw" id="j_pw"><br>
+			<label>패스워드 확인</label>
+			<input type="password" name="j_pw2" id="j_pw2"><br>
+			<label>이름</label>
+			<input type="text" name="j_name" id="j_name"><br>
+			<label>나이</label>
+			<input type="text" name="j_age" id="j_age"><br>
+			<label>성별</label>
+			<input type="radio" value="male" name="gender">남
+			<input type="radio" value="female" name="gender">여<br>
+			<label>취미</label>
+			<input type="checkbox" name="hobby" value="reading">독서
+			<input type="checkbox" name="hobby" value="bicycle">자전거
+			<input type="checkbox" name="hobby" value="game">게임
+			<input type="checkbox" name="hobby" value="running">달리기<br>
+			<input type="button" onclick="check()" value="전송">
+			<input type="reset" value="취소">
+		</form>
+		
+	</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+		<head>
+		<meta charset="UTF-8">
+	<title>Insert title here</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			// 1~200까지 숫자 입력
+			// 3의 배수를 초기화 버튼
+			// 5의 배수의 합계 구하는 버튼
+		
+			var lotto=[];
+			function insertNum(){
+				for(var i=0; i<200; i++){
+					lotto[i] = i+1;  // 1~200까지 숫자 입력
+					document.write('lotto ['+i+']'+lotto[i]+'<br>');
+				}
+			}
+			
+			function delNum2(){
+				for(var i=0; i<lotto.length;i++){
+					if(i%3=0){
+						lotto[i]=0;
+					}
+					continue;
+				}
+				printNum();
+				document.write('<a href="ex0324_04.html">돌아가기</a><br>');
+			}
+			
+			function sumNum(){
+				var sum=0;
+				for(var i=0; i<lotto.length; i++){
+					if(i%5=0){
+						sum += lotto[i];
+					}
+					continue;
+				}
+				document.write('배열의 5의 배수 데이터 합: '+sum+'<br>');
+				document.write('<a href="ex0324_04.html">돌아가기</a><br>');
+			}
+			
+		
+// 			var lotto=[];
+// 			function insertNum(){
+// 				for(var i=0; i<45; i++){
+// 					lotto[i] = i+1;  // 1~45까지 숫자 입력
+// 					document.write('lotto ['+i+']'+lotto[i]+'<br>');
+// 				}
+// 			}
+		
+			// 홀수번째 데이터 초기화
+// 			function delNum(){
+// 				for(var i=0; i<lotto.length;i++){
+// 					if(i%2==0){
+// 						lotto[i]=0;
+// 					}
+// 					continue;
+// 				}
+// 				printNum();
+// 				document.write('<a href="ex0324_04.html">돌아가기</a><br>');
+// 			}
+			
+			function printNum(){
+				for(var i=0; i<lotto.length;i++){
+					document.write('lotto ['+i+']'+lotto[i]+'<br>');
+				}
+			}
+		
+			insertNum();
+			
+			
+			// 데이터 합
+// 			function addNum(){
+// 				var sum = 0;
+// 				for(var i=0; i<lotto.length;i++){
+// 					sum += lotto[i];
+// 				}
+// 				document.write('덧셈의 결과 값: '+sum+'<br>');
+// 				document.write('<a href="ex0324_04.html">돌아가기</a><br>');
+// 			}			
+		
+//-------------------------------------------------------------------------------			
+
+// 			var city = new Array("Seoul", "Busan", "Incheon");
+// 			function printArr(){
+// 				if(city instanceof Array){
+// 					document.write('배열이 맞습니다. <br>');
+// 					for(var i=0; i<city.length; i++){
+// 						document.write('배열 데이터 ['+i+'] '+city[i]+'<br>');
+// 					}
+// 				}else{
+// 					document.write('배열이 아닙니다. <br>');
+// 					document.write('데이터 값: '+city+'<br>');
+// 				}
+// 			}
+		
+// 			printArr();
+			
+// 			document.write('city typeof 변수 타입 비교: '+typeof city+'<br>');
+// 			document.write('city isArray 타입 비교: '+Array.isArray(city)+'<br>');
+		
+
+		
+//-------------------------------------------------------------------------------			
+		
+		
+// 		// 10개 배열: 1, 5, 10, 20, 30, 90, 110, 120, 150, 200 
+		
+// 		var num = new Array(1, 5, 10, 20, 30, 90, 110, 120, 150, 200);
+// 		function printArr(){
+// 			var sum=0;
+// 			for(var i=0; i<num.length; i++){
+// 				sum += num[i];
+// 				document.write(i+1+'번째 배열까지 합: '+sum+'<br>');
+// 			}
+// 			document.write('배열의 총합: '+sum+'<br>');
+// 		}
+		
+// 		printArr();
+		
+
+		
+//-------------------------------------------------------------------------------		
+		
+// 			var com=[95,88,,72,68,,99,78,87];
+// 			var getAvg;
+// 			function printArr(){
+// 				var i=0;
+// 				var sum=0;
+// 				var count=0;
+// 				for(i=0;i<com.length;i++){
+// 					if(com[i]===undefined){  // === (3개) : 값과 타입이 모두 같아야함
+// 						continue;
+// 					}
+// 					sum += com[i];
+// 					count++;
+// 				}
+// 				getAvg = sum/(count);
+			
+// 				document.write('학생 수: '+count+'<br>');
+// 				document.write('배열 합계: '+sum+'<br>');
+// 				document.write('배열 평균: '+getAvg+'<br>');
+// 			}
+		
+// 			printArr();
+		
+		
+		
+		
+//-------------------------------------------------------------------------------
+		
+// 			var city = ["Seoul", "Busan", "Incheon"];
+			
+// 			var city=[];
+// 			city[0] = "Seoul";
+// 			city[1] = "Busan";
+// 			city[2] = "Incheon"
+			
+// 			function printArr(){
+// 				for(var i=0; i<city.length;i++){
+// 					document.write('배열 데이터 ['+i+']: '+city[i]+'<br>');
+// 				}
+// 			}
+			
+// 			printArr();
+					
+	</script> 
+	
+<!-- 	<button onclick = "insertNum()">돌아가기</button> -->
+<!-- 	<button onclick= "delNum()">배열의 홀수번째 데이터 초기화</button> -->
+	<button onclick= "delNum2()">배열의 3의 배수 데이터 초기화</button>
+	<button onclick= "sumNum()">배열의 5의 배수 데이터  합계</button>
+	</body>
+</html>

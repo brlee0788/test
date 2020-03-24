@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			// 1~200까지 숫자 입력
+			// 3의 배수를 초기화 버튼
+			// 5의 배수의 합계 구하는 버튼
+		
+			var lotto=[];
+			var i=0;
+			
+			// 데이터 입력
+			function insertNum(){
+				for(i=0; i<45; i++){
+					lotto[i] = i+1;  // 1~45까지 숫자 입력
+					document.write('데이터 값: '+lotto[i]+" ");
+					if(lotto[i]%5==0){
+						document.write('<br>');
+					}
+				}
+			}
+			
+		
+			// 모든 데이터 초기화
+			function alldelNum(){
+				for(i=0; i<lotto.length;i++){
+					lotto[i]=0;
+				}
+				printNum();
+			}			
+			
+			// 모든 배열 지우기 (배열 0개)
+			function del_arratNum(){
+				lotto.length=0;
+				printNum();
+			}		
+			
+			// 배열 전체 문자열로 반환
+			function joinNum(){
+				var j_array = lotto.join();
+				var j_array2 = lotto.join('-');
+				var j_array3 = lotto.join('/');
+				var j_array4 = lotto.join(' 그리고 ');
+				document.write('조인 결과 1: '+j_array+'<br>');
+				document.write('조인 결과 2: '+j_array2+'<br>');
+				document.write('조인 결과 3: '+j_array3+'<br>');
+				document.write('조인 결과 4: '+j_array4+'<br>');
+				document.write('<a href="ex0324_05.html">돌아가기</a><br>');
+			}	
+			
+			// 3의 배수 배열 값 초기화
+			function delNum(){
+				for(i=0; i<lotto.length;i++){
+					if(lotto[i]%3==0){
+						lotto[i]=0;
+					}
+					continue;
+				}
+				printNum();
+			}
+			
+			// 5의 배수 배열 값 총합
+			function sumNum(){
+				var sum=0;
+				for(i=0; i<lotto.length; i++){
+					if(lotto[i]%5==0){
+						sum += lotto[i];
+					}
+					continue;
+				}
+				
+				document.write('배열의 5의 배수 데이터 합: '+sum+'<br>');
+				document.write('<a href="ex0324_05.html">돌아가기</a><br>');
+			}
+			
+			function printNum(){
+				for(i=0; i<lotto.length;i++){
+					document.write('데이터 값: '+lotto[i]+" ");
+					if((i+1)%5==0){
+						document.write('<br>');
+					}
+				}
+				
+				document.write('lotto 배열 크기 : '+lotto.length+'<br>');
+				document.write('<a href="ex0324_05.html">돌아가기</a><br>');
+			}
+		
+			insertNum();
+			
+		</script> 
+		<br><br>
+		<button onclick= "alldelNum()">모든 데이터 초기화</button>
+		<button onclick= "delNum()">배열의 3의 배수 데이터 초기화</button>
+		<button onclick= "sumNum()">배열의 5의 배수 데이터  합계</button>
+		<button onclick= "del_arratNum()">배열을 0개로 초기화</button>
+		<button onclick= "joinNum()">배열 전체를 문자열로 반환</button>
+	</body>
+</html>

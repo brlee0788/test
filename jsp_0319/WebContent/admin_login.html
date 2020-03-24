@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>관리자 로그인</title>
+		<link type="text/css" rel="stylesheet" href="css/admin_login_style.css">
+	</head>
+	<body>
+		<header>
+			<div id="header"> 
+				<div>
+					<a>LMS<span>Start Up</span>Type</a>
+				</div>
+				<div>
+					<span>Administrator</span>
+				</div>
+			</div>
+		</header>
+		
+		<section>
+			<div id="section">
+				<div>
+					<div>
+						<table>
+							<tbody>
+								<tr>
+									<td id="id"><input type="text" name="loginId" value="admin"></td>
+									<td rowspan="2"><p><input type="button" name="loginbt" value="LOGIN"></p></td>
+								</tr>
+								<tr>
+									<td id="pw"><input type="password" name="loginPw" value="12345"></td>
+								</tr>
+							</tbody>
+						</table>
+						<p>
+							<select id="loginSelect"> 
+								<option value>권한선택[Select]</option>
+								<option value="employe" selected>직원[EMPLOYE]</option>
+								<option value="teacher">강사[TEACHER]</option>
+							</select> 
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<footer>
+			<div id="footer">
+				<p>Copyright © 2019 <strong>LMS ADMIN</strong> All rights reserved.</p>
+			</div>
+		</footer>
+		
+	</body>
+</html>

@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+*{
+	margin: 0; padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+header{
+	width: 100px;
+	height:49px;
+}
+
+#header{
+	width:1520px;
+	height:49px;
+	margin: 0 auto;
+	position:relative;
+	background: #3d3d3d;
+	line-height: 160%;
+}
+
+#header>div:nth-child(1){
+	width: 172px;
+	height: 20px;
+	position: absolute;
+	margin: 14px 0 0 15px;
+	box-sizing: border-box;
+	line-height: 18px;
+	background: #3d3d3d;
+}
+
+#header>div:nth-child(1)>a{
+	width: 172px;
+	height: 18px;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	background: #3d3d3d;
+}
+
+#header>div:nth-child(1)>a>span{
+	font-size: 20px;
+	font-weight: bold;
+	color: #ed5f00;
+	margin: 0 5px;
+	background: #3d3d3d;
+}
+
+#header>div:nth-child(2){
+	width: 146px;
+	height: 20px;
+	margin: 19px 21px 0 0;
+	box-sizing: border-box;
+	position:absolute;
+	right:0;
+	line-height: 14px;
+}
+
+#header>div:nth-child(2)>span{
+	color:white;
+	font-size: 24px;
+	font-weight: bold;
+	background: #3d3d3d;
+}
+
+section{
+	width:1520px;
+	height: 600px;	
+	positon:relative;
+}
+
+#section{
+	width: 780px;
+	height: 600px;
+	margin: 150px auto 0 auto;
+	background: url('../images/bg_LoginBox.png') 0 0 no-repeat;
+}
+
+#section>div{
+	width: 780px;
+	height: 600px;
+	padding: 235px 0 0 300px;
+	box-sizing: border-box;
+	position:absolute;
+	left: 325px;
+	top: 395px;
+}
+
+#section>div>div{
+	width: 720px;
+	height: 112px;
+	position:absolute;
+	left: 345px;
+	top:40px;
+}
+
+#section>div>div>table{
+	width: 383px;
+	height: 82px;
+	margin: 0;
+	border-collapse: collapse;
+	
+}
+
+#section>div>div>table>tbody{
+	vertical-align: middle;
+	
+}
+
+#id>input{
+	width: 250px;
+	height:20px;
+	padding: 8px 0 8px 17px;
+	border: 1px solid #b9babd;
+	font-size: 16px;
+	color:#444;
+	background: url('../images/bg_user.gif') 96% 48% no-repeat;
+	vertical-align: middle;
+	line-height: 20px;
+}
+
+#section>div>div>table>tbody>tr>td:nth-child(2) {
+	width: 112px;
+	height: 82px;	
+}
+	
+#section>div>div>table>tbody>tr>td:nth-child(2)>p{
+	width: 100px;
+	height: 80px;	
+	margin: 0px 0 0 10px;
+}
+
+#section>div>div>table>tbody>tr>td:nth-child(2)>p>input{
+	width: 100px;
+	height: 80px;
+	padding:3px 10px 0px 20px;
+	font-size: 16px;
+	color: white;
+	font-weight: bold;
+	background: url('../images/btn_login.png') 0 0 no-repeat;
+	border: 1px solid #90261b;
+	vertical-align: middle;
+	line-height: 20px;
+}
+	
+#pw>input{
+	width: 250px;
+	height:20px;
+	padding: 8px 0 8px 17px;
+	border: 1px solid #b9babd;
+	font-size: 16px;
+	color:#444;
+	background: url('../images/bg_pw.gif') 96% 48% no-repeat;
+	vertical-align: middle;
+	line-height: 20px;
+}	
+	
+#section>div>div>p{
+	width: 780px;
+	height: 25px;
+	margin-top: 5px;
+	position:relative;
+}
+	
+#loginSelect{
+	width: 127px;
+	height: 25px;
+	padding:2px;
+	border: 1px solid #c4c4c4;
+	line-height: 25px;
+	font-size: 12px;
+	color:#666;
+}
+	
+footer{
+	width:1520px;
+	height: 76px;	
+}	
+	
+#footer{
+	width:432px;
+	height: 76px;
+	padding-bottom: 30px;
+	margin: 0 auto;
+}
+
+#footer>p{
+	width: 432px;
+	height: 19px;
+	margin-top:27px;
+	color: #777;
+	font-size: 11px;
+	text-align: center; 
+}	
+
+#footer>p>strong{
+	font-size: 12px;
+}
+	
+	
+	
+	
+	
+	
+	
+	

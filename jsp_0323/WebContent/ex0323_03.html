@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript" src="js/custom3.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style3.css">
+	</head>
+	<body>
+	<!-- 
+		1. form
+		2. 아이디, 패스워드, 패드워드 확인, 이름, 나이, 성별(라디오버튼), 전화번호, 취미(독서, 게임, 수영, 자전거, 등사), 전송, 취소
+		3. 아이디 - 소문자, 대문자까지만 입력가능 (길이: 4~12)
+		4. 패스워드와 패스워드 확인이 같은지 비교, 다르면 패스워드 포커스
+		5. 패스워드 - 소문자, 대문자, 숫자, 특수문자 1개이상씩 입력해야 함
+		6. 이름 - 국문 한글만 입력가능 (길이: 1~)
+		7. 나이 - 숫자만 입력가능(길이: 1~3)
+		8. 전화번호 - 숫자만 입력가능(길이: 8자리 이상)
+	 -->
+		<form action="" name="join" method="get">
+			
+			<label for="j_id">아이디</label>
+			<input type="text" name="j_id" id="j_id" autofocus="autofocus"><br>
+			
+			<label for="j_pw">패스워드</label>
+			<input type="password" name="j_pw" id="j_pw"><br>
+			
+			<label for="j_pw2">패스워드 확인</label>
+			<input type="password" name="j_pw2"><br>
+			
+			<label for="j_name">이름</label>
+			<input type="text" name="j_name" id="j_name"><br>
+			
+			<label for="j_age">나이</label>
+			<input type="text" name="j_age" id="j_age"><br>
+			
+			<h2>성별</h2>
+			<input type="radio" name="j_gender" value="m" id="male"><label for="male">남자</label>
+			<input type="radio" name="j_gender" value="f" id="female"><label for="female">여자</label><br>
+			
+			<label for="j_tel">전화번호</label>
+			<input type="text" name="j_tel" id="j_tel"><br>
+			
+			<h2>취미</h2>
+			<input type="checkbox" name="j_hobby" id="hobby1" value="reading"><label for="hobby1">독서</label> 
+			<input type="checkbox" name="j_hobby" id="hobby2" value="game"><label for="hobby2">게임</label> 
+			<input type="checkbox" name="j_hobby" id="hobby3" value="swimming"><label for="hobby3">수영</label> 
+			<input type="checkbox" name="j_hobby" id="hobby4" value="riding"><label for="hobby4">자전거</label> 
+			<input type="checkbox" name="j_hobby" id="hobby5" value="hiking"><label for="hobby5">등산</label> 
+			
+			<input type="button" value="전송" onclick="check1()">
+			<input type="button" value="취소">
+		
+		</form>
+
+	
+	
+	</body>
+</html>

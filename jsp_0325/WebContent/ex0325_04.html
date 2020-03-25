@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" type="text/css" href="css/style2.css">
+<!-- 		<style type="text/css"> 
+ 			p{width: 400px; height: 200px; 
+ 			  border: 1px solid black; 
+ 			  margin: 20px; text-align: center; 
+ 			  font-size: 20px;  
+ 			  color: red; padding: 80px; 
+ 			  box-sizing: border-box; 
+ 			} 
+			
+ 		</style> -->
+	</head>
+	<body>
+		
+		<table>
+			<tr>
+				<th>학번</th>
+				<th>이름</th>
+				<th>국어</th>
+				<th>영어</th>
+				<th>합계</th>
+				<th>평균</th>
+			</tr>
+			
+			<tr>
+				<td id="hak_num"></td>
+				<td id="name"></td>
+				<td id="kor"></td>
+				<td id="eng"></td>
+				<td id="total"></td>
+				<td id="avg"></td>
+			</tr>
+			
+			<tr>
+				<td id="hak_num2"></td>
+				<td id="name2"></td>
+				<td id="kor2"></td>
+				<td id="eng2"></td>
+				<td id="total2"></td>
+				<td id="avg2"></td>
+			</tr>
+			
+			<tr>
+				<td id="hak_num3"></td>
+				<td id="name3"></td>
+				<td id="kor3"></td>
+				<td id="eng3"></td>
+				<td id="total3"></td>
+				<td id="avg3"></td>
+			</tr>
+			
+		</table>
+<!-- 		
+		<p>홍길동 차 스펙</p>
+		<p id="carname"></p>
+		<p id="carcolor"></p> 
+		<p>강감찬 차 스펙</p>
+		<p id="carname2"></p>
+		<p id="carcolor2"></p> 
+-->	
+		
+		
+		<script type="text/javascript">
+			
+			function stu(hak_num,name,kor,eng){
+				this.hak_num = hak_num;
+				this.name = name;
+				this.kor = kor;
+				this.eng = eng;
+				this.total = function(){return this.kor + this.eng};
+				this.avg = function(){return this.total()/2};
+			}
+			
+			var hong = new stu(1,"홍길동",100,80);
+			var kang = new stu(2,"강감찬",99,87);
+			var yoo = new stu(3,"유관순",100,99);
+			
+			
+			var hhak = document.getElementById("hak_num");
+			hhak.textContent = hong.hak_num;
+			var hname = document.getElementById("name");
+			hname.textContent = hong.name;
+			var hkor = document.getElementById("kor");
+			hkor.textContent = hong.kor;
+			var heng = document.getElementById("eng");
+			heng.textContent = hong.eng;
+			var htotal = document.getElementById("total");
+			htotal.textContent = hong.total();
+			var havg = document.getElementById("avg");
+			havg.textContent = hong.avg();
+			
+			var khak = document.getElementById("hak_num2");
+			khak.textContent = kang.hak_num;
+			var kname = document.getElementById("name2");
+			kname.textContent = kang.name;
+			var kkor = document.getElementById("kor2");
+			kkor.textContent = kang.kor;
+			var keng = document.getElementById("eng2");
+			keng.textContent = kang.eng;
+			var ktotal = document.getElementById("total2");
+			ktotal.textContent = kang.total();
+			var kavg = document.getElementById("avg2");
+			kavg.textContent = kang.avg();
+			
+			var yhak = document.getElementById("hak_num3");
+			yhak.textContent = yoo.hak_num;
+			var yname = document.getElementById("name3");
+			yname.textContent = yoo.name;
+			var ykor = document.getElementById("kor3");
+			ykor.textContent = yoo.kor;
+			var yeng = document.getElementById("eng3");
+			yeng.textContent = yoo.eng;
+			var ytotal = document.getElementById("total3");
+			ytotal.textContent = yoo.total();
+			var yavg = document.getElementById("avg3");
+			yavg.textContent = yoo.avg();
+		
+	
+// 			function car(name,color,speed){
+// 				this.name = name;
+// 				this.color = color;
+// 				this.speed = speed;
+// 				this.speed_up = function(){
+// 					return this.speed+10;
+// 				};
+// 				this.speed_down = function(){
+// 					return this.speed-10;
+// 				};
+// 			}
+			
+// 			var hong =new car("sonata", "blue", 100);
+// 			var kang = new car("jeep", "red", 70);
+			
+// 			var cname = document.getElementById("carname");
+// 			cname.textContent = "홍길동 자동차 이름: "+hong.name;
+// 			var ccolor = document.getElementById("carcolor");  // 화면에서 id가 carcolor 인 것을 찾아오는 명령어
+// 			ccolor.textContent = "홍길동 자동차 색상: "+hong.color;
+			
+// 			var kname = document.getElementById("carname2");
+// 			kname.textContent = "강감찬 자동차 이름: "+kang.name;
+// 			var kcolor = document.getElementById("carcolor2");  
+// 			kcolor.textContent = "강감찬 자동차 색상: "+kang.color;
+			
+		</script>
+
+
+<!-- //------------------------------------------------------------------------------------	 -->
+
+
+<!--  
+		<p id="carname"></p>
+		<p id="carcolor"></p> 
+		<p id="carspeed"></p>
+		
+		<script type="text/javascript">
+			var car = new Object();
+			car.name ='sonata';
+			car.speed = 100;
+			car.color = 'blue';
+			car.speed = function(){
+				return this.speed +10;
+			};
+			
+			var cname = document.getElementById('carname');
+			cname.textContent='자동차 이름: '+car.name;
+			
+			document.getElementById('carcolor').textContent = '자동차 색상: '+car.color;
+			
+		</script>
+-->		
+		
+		
+		
+<!-- //------------------------------------------------------------------------------------	 -->
+
+<!-- 		<p id="var1"></p> -->
+<!-- 		<p id="var2"></p> -->
+<!-- 		<p id="var3"></p> -->
+	
+<!-- 		<script type="text/javascript"> 
+// 			var car = {
+// 				name: 'sonata',
+// 				speed: 100,
+// 				color: 'white',
+				
+// 				m1:function(){
+// 					return this.name;
+// 				},
+			
+// 				m2:function(a){
+// 					var result=this.speed+a;
+// 					return result;
+// 				},
+				
+// 				m3:function(a,b){
+// 					name = this.m1();
+// 					var result=this.m2(a)+b;
+// 					return name+": "+result;
+// 				},
+				
+// 			};
+			
+// 			document.getElementById("var1").innerHTML=car.m1();
+// 			document.getElementById("var2").innerHTML=car.m2(50);
+// 			document.getElementById("var3").innerHTML=car.m3(50,500);
+			
+// 			document.getElementById("var1").innerHTML="자동차 이름: "+car.name;
+// 			document.getElementById("var2").innerHTML="자동차 속도: "+car.speed;
+// 			document.getElementById("var3").textContent="자동차 색상: "+car.color
+		</script>
+-->
+		
+	</body>
+</html>

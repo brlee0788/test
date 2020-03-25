@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+		// k-국문학과 e-영문학과 m-수학과 c-컴퓨터공학과
+		// 컴퓨터 학과 학생들만 뽑아서 배열 생성
+			var stu_num = ["k202001", "k202002", "e202001", "e202002", "e202003", "m202001", "m202002", "c202001", "c202002"
+							, "k202003", "e202004", "c202003"]; 
+		
+			function filterArr(value){
+				return value.indexOf("c") != -1
+			}
+			
+			function newArr(){
+				var new_stu = stu_num.filter(filterArr);	
+				document.write("전체 학생: "+stu_num+"<br>");
+				document.write("컴퓨터공학과 학생: "+new_stu+"<br>");
+			}
+		
+		
+		</script>	
+		
+		<button onclick="newArr()">컴퓨터학과 학생 배열 만들기</button>
+		
+<!--	
+// -------------------------------------------------------------------------------------------------------------			
+		
+			var data = [43,12,10,78,60,55,96,45,35,28];
+			function filterArr(value){
+				return value>=18;  
+			}
+			
+			var new_data = data.filter(filterArr);
+			document.write("필터 전 데이터: "+data+"<br>");
+			document.write("필터 후 데이터: "+new_data+"<br>");
+			
+			
+			
+		
+// -------------------------------------------------------------------------------------------------------------		
+			
+// 			var kdata = ["서울","부산","청주","대구"];
+// 			function printcity(item,index){
+// 				document.write('배열의 데이터 ['+index+']: '+item+'<br>');
+// 			}
+// 			kdata.forEach(printcity);
+					
+// 			var data = [1,2,3,4,5,6,7,8,9,10];
+// 			var sum = 0;
+			
+// 			function add_data(value){
+// 				sum += value;
+// 			}
+			
+// 			data.forEach(add_data);
+// 			document.write('배열의 합: '+sum+'<br>');
+		
+// -------------------------------------------------------------------------------------------------------------		
+
+// 			var ndata1 = [19,38,67,26,55,24,53,12,31];
+// 			var ndata2 = [132,2,41,123,45,1234,6,29,4567];
+			
+// 			document.write('수치 정렬 1: '+ndata1.sort()+'<br>');  // 자리수가 동일하면 문제 없이 정렬이 됨
+// 			document.write('function(a,b){return a-b;} <br>');
+// 			document.write('수치 정렬 2: '+ndata2.sort()+'<br>');  // 자리수가 다르면 각 원소의 첫번째 자리 수를 기준점으로 비교해서 정렬이 됨
+// 			document.write('수치 정렬 3: '+ndata2.sort(function(a,b) {  // function(a,b){ return a-b; } -> 양수면 자리 바꿈, 음수면 그대로 유지
+// 				return a-b;
+// 			})+'<br>');
+		
+		
+		
+// -------------------------------------------------------------------------------------------------------------		
+		
+// 			var data=[9,8,7,6,5,4,3,2,1];
+// 			document.write('배열: '+data.join()+'<br>');  //join() : 배열에 저장된 모든 원소를 문자열로 변환한 후 연결하여 출력
+// 			var rev_data = data.reverse();
+// 			document.write('배열: '+rev_data.join()+'<br>');
+	</script> -->
+	</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+
+	</head>
+	<body>
+		<p id="digClock"></p>
+		<script type="text/javascript">
+			function digClock(){
+				var today = new Date();
+				var time = today.getHours()+"시" + today.getMinutes()+"분" + today.getSeconds()+"초";
+				document.getElementById("digClock").innerHTML=time;
+				setTimeout('digClock()',1000);
+			}
+			
+			digClock();
+		
+			
+		</script>
+		
+	
+	
+<!-- 	
+		<p id="date1"></p>
+		<p id="year"></p>
+		<p id="month"></p>
+		<p id="date"></p>
+		<p id="day"></p>
+		<p id="hour"></p>
+		<p id="minute"></p>
+		<p id="msecond"></p>
+		
+		<script type="text/javascript">
+			
+			var today = new Date();
+			document.getElementById('date1').innerHTML = today;
+			document.getElementById('year').innerHTML = today.getFullYear()+"년"; 
+			document.getElementById('month').innerHTML = (today.getMonth()+1)+"월";
+			document.getElementById('date').innerHTML = today.getDate()+"일";
+			
+			today.getDay();
+			var dd="";
+			switch (today.getDay()) {
+			case 0:
+				dd= "일요일";
+				break;
+				
+			case 1:
+				dd= "월요일";
+				break;
+				
+			case 2:
+				dd= "화요일";
+				break;
+				
+			case 3:
+				dd= "수요일";
+				break;
+				
+			case 4:
+				dd= "목요일";
+				break;
+				
+			case 5:
+				dd= "금요일";
+				break;
+			
+			case 6:
+				dd= "토요일";
+				break;
+			}
+			
+			document.getElementById('day').innerHTML = dd;
+			document.getElementById('hour').innerHTML = today.getHours()+"시";
+			document.getElementById('minute').innerHTML = today.getMinutes()+"분";
+			document.getElementById('msecond').innerHTML = today.getMilliseconds()+"초";
+			
+			
+		</script>
+ -->
+	</body>
+</html>

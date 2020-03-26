@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/custom2.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style2.css">
+	</head>
+	<body>
+
+		<table id="t1">
+			<tr>
+				<td rowspan="2" id="menu">Prepaid Data SIM</td>
+				<td class="options">
+					<form action="" name="form" method="get">
+						<input type="checkbox" id="opt1" name="SIM" value="opt1"> ￦6,600 1일(24시간)
+					</form>
+				</td>
+				<td class="options">
+					<form action="" name="form2" method="get">
+							<input type="checkbox" id="opt2" name="SIM" value="opt2"> ￦27,500 5일(120시간)
+					</form>
+				</td>
+				<td class="options">
+					<form action="" name="form3" method="get">
+						<input type="checkbox" id="opt3" name="SIM" value="opt3"> ￦27,500 5일(120시간)
+					</form>
+				</td>
+			</tr>
+			
+			<tr>
+				<td class="options"> 
+					<form action="" name="form4" method="get">
+							<input type="checkbox" id="opt4" name="SIM" value="opt4"> ￦60,500 20일(480시간)
+					</form>
+				</td>
+				
+				<td class="options">
+					<form action="" name="form5" method="get">
+							<input type="checkbox" id="opt5" name="SIM" value="opt5"> ￦71,500 30일(720시간)
+					</form>
+				</td>
+				<td class="options"></td>
+			</tr>
+			
+		</table>
+
+		<table id="t2">
+			<tr id="t2_1">
+				<th>상품</th>
+				<th>이용요금</th>
+				<th>임대기간요금</th>
+				<th>수량</th>
+				<th>합계</th>
+				<th>삭제</th>
+			</tr>
+			
+			<tr id="t2_2">
+				<td>Prepaid Data SIM 1일(24시간)<br> 
+				<p>본 상품은 1일 동안 이용 가능합니다.</p></td>
+				<td>6,600 원 / 1개	</td>
+				<td>-</td>
+				<td>
+					<form action="" name="amount" method="get">
+						<select name="DPrSim4" id="DPrSim4">
+							<option value>선택</option>
+							<option value="1">1개</option>
+							<option value="2">2개</option>
+							<option value="3">3개</option>
+						</select>
+					</form>
+				</td>
+				<td>0원</td>
+				<td><img src="images/btn_close.gif"></td>
+			</tr>
+			<tr id="t2_3" >
+				<td>이용요금총액 </td>
+				<td colspan="5">0원</td>
+			</tr>
+			<tr id="t2_4">
+				<td>할인금액</td>
+				<td colspan="5"><span>*온라인 예약 할인</span><span>-0</span>원</td>
+			</tr>
+			<tr id="t2_5">
+				<td>이용요금총액 <br><p>*원화(KRW)로 결제되며 결제 시점의 환율이 적용됩니다.</p></td> 
+ 				<td colspan="5"><span>-0원</span></td>		 
+			</tr>
+		</table>
+
+
+
+	</body>
+</html>

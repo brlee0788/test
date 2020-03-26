@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			img{width: 200px;}
+		</style>
+		<script type="text/javascript">
+			function enlarge(){
+				document.getElementById("s01").style.width="600px";
+			}
+			
+			function origin(){
+				document.getElementById("s01").style.width="200px";
+			}
+			
+		</script>
+	</head>
+	<body>	
+		<img alt="" src="images/s01.jpg" id="s01"><br>
+		<button onclick="enlarge()">이미지 확대하기(600px)</button>
+		<button onclick="origin()">이미지 원래대로</button>
+	</body>
+</html>

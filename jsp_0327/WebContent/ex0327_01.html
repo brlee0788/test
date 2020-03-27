@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/prefixfree.dynamic-dom.min.js"></script>
+		<style type="text/css">
+			img{
+				width: 640px;
+				border: 2px solid red;
+			}
+			p{font-size: 20px;}
+		</style>
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#btn01").click(function(){
+					$("img").css({"border": "2px dashed black"});
+					$("img").attr({"alt":"도시이미지",  "src":"images/img01.jpg"});
+					$("p").text("도시 이미지입니다.");
+				});
+				
+				
+				$("#btn02").click(function(){
+					$("img").css({"border":"2px solid red"});
+					$("img").attr({"alt":"벚꽃이미지", "src":"images/img02.jpg"});
+					$("p").text("벚꽃 이미지입니다.");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<img alt="도시이미지" src="images/img01.jpg"><br>
+		<p>버튼을 클릭해주세요. 이미지 설명이 나옵니다.</p>
+		<button id="btn01">이미지 1</button>
+		<button id="btn02">이미지 2</button>
+	</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/prefixfree.dynamic-dom.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript">
+			function move(obj,time){
+				$(obj).stop().animate({
+					"left":"-750px",
+					"top": "0"
+				}, time);
+			}
+	
+			function back(css){
+				$(css).stop().animate({
+					"left":"0",
+					"top":"0"
+				});
+			}
+			
+			$(document).ready(function(){
+			});
+		</script>
+	
+		<style type="text/css">
+			#init{
+				height: 300px;
+				font-size: 20px;
+				display: inline-block;
+			}
+			
+			#moving{
+				border: 1px solid black;
+				margin: 20px auto 0 auot;
+				text-align: right;
+			}
+			
+			#moving img{
+				cursor: pointer;
+				position: relative;
+				width:550px;
+			}
+						
+		</style>
+	</head>
+	<body>
+	
+		<div id="init">
+			<button onclick="back('#moving img')">초기화 버튼</button>
+		</div>
+	
+		<div id="moving">
+			<img onclick="move(this,6000)" src="images/img01.jpg"><br>
+			<img onclick="move(this,3000)" src="images/img02.jpg"><br>
+		</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<!-- 	
+		<div id="slide">[오늘의 공지사항]</div>
+		<div id="panel">오늘은 jQuery 프로그램을 학습합니다.<br>
+		예제를 작성한 후 실행해 주세요.
+		</div>
+		<div id="flip">toggle slide</div>
+		<br>
+		<button id="stop">stop sliding</button>
+ -->		
+
+	</body>
+</html>

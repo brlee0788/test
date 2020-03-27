@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/prefixfree.dynamic-dom.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			
+			$("img").hide();
+			
+			$("div").click(function(){
+				$("p").text("div를 클릭했습니다.");
+			});
+
+			$("div").mouseenter(function(){
+				$("p").text("div에 마우스가 올라갔습니다.");
+				$(this).css({"background":"#efefef"});
+				$(this).css({"border-bottom":"5px solid purple"});
+//				$("img").slideDown(2000);
+//				$("img").fadeIn(2000);
+			});
+			
+			$("div").mouseleave(function(){
+				$("p").text("div에 마우스가 빠져나갔습니다.");
+				$(this).css({"background":"yellow"});
+				$(this).css({"border-bottom":"1px solid black"});
+//				$("img").slideUp(2000);
+//				$("img").fadeOut(2000);
+			});
+			
+			$(window).scroll(function(){
+				var scrollNum = $(this).scrollTop();
+				$("div").css({"position":"fixed"});
+				$("p").eq(0).text("스크롤 높이: "+scrollNum)
+				if(scrollNum<300){
+					$("p").eq(1).text("300 이하의 높이 입니다.");
+//					$("div").css({"background":"purple"});
+					$("div").css({"background-image":"url('images/cat01.jpg')"});
+				}else if(scrollNum<600){
+					$("p").eq(1).text("300 이상 600 이하의 높이 입니다.");
+//					$("div").css({"background":"pink"});
+					$("div").css({"background-image":"url('images/img01.jpg')"});
+				}else{
+					$("p").eq(1).text("600 이상의 높이 입니다.");
+//					$("div").css({"background":"pink"});
+					$("div").css({"background-image":"url('images/img02.jpg')"});
+				}
+
+			});
+
+			$(window).resize(function(){
+				$("p").text("화면이 resize 되었습니다.");
+				$("div").css({"position":"fixed"});
+
+			});
+			
+
+		});
+		
+		</script>
+		<style type="text/css">
+			body{height: 2000px;}
+
+			div{
+				width: 300px; height: 300px;
+			/* 	background: yellow; */
+				margin: 30px auto;
+				border: 1px solid black;
+				background-image: url('../images/cat01.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+			
+			p{ 
+				font-size: 15px;
+				text-align: center;
+				padding-top: 100px;
+			}
+			
+			/*
+			img{
+				width: 300px;
+			}
+			*/
+		</style>
+	</head>
+	<body>
+		<img alt="고양이 이미지" src="images/cat01.jpg">
+		<div>
+			<p>이벤트 확인</p>
+			<p></p>
+		</div>
+	</body>
+</html>

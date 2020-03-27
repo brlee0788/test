@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/prefixfree.dynamic-dom.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+	
+				$(window).scroll(function(){
+					var scNum = $(this).scrollTop();
+					$("p").eq(0).text("스크롤 높이: "+scNum);
+				});
+				
+				$(window).mousemove(function(e){
+					var x = e.pageX;
+					var y = e.pageY;
+					$("p").eq(1).text("x좌표: "+x);
+					$("p").eq(2).text("y좌표: "+y);
+	//				if(x<=300){
+	//					$("div").eq(0).css({"background":"url('images/cat01.jpg"});
+	//				}else if(x<=600){
+	//					$("div").eq(0).css({"background":"pink"});
+	//				}else{
+	//					$("div").eq(0).css({"background":"gray"});
+	//				}
+				});
+				
+				
+				var xWidth=0;
+				var xHeight=0;
+				$("#btn01").click(function() {
+					xWidth = $("div").eq(1).width()-10;
+					$("div").eq(1).width(xWidth);
+					$("#div02 p").eq(0).text("박스 넓이: "+xWidth);
+					xHeight = $("div").eq(1).height()-10;
+					$("div").eq(1).height(xHeight);	
+					$("#div02 p").eq(1).text("박스 높이: "+xHeight);
+				});
+				
+				
+			});
+		</script>
+		
+		<style type="text/css">
+			body{height: 2000px;}
+			
+			div{
+			    width: 300px;
+			    height: 300px;
+			    margin: 30px;
+			    border: 1px solid black;
+			    background-size: contain;
+			    background-repeat: no-repeat;
+			}
+			    
+			p{font-size: 20px;}
+		
+		</style>
+	</head>
+	<body>
+		<div>
+			<p>스크롤 높이</p>
+			<p>x좌표: 0</p>
+			<p>y좌표: 0</p>
+		</div>
+		<div id="div02">
+			<p>박스 넓이: 0</p>
+			<p>박스 높이: 0</p>
+		</div>
+		
+		<button id="btn01">박스 축소</button>
+		
+<!-- 		<div></div> -->
+		
+	</body>
+</html>

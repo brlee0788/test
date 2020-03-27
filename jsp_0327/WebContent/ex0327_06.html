@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/prefixfree.dynamic-dom.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+	
+				$("#btn01").mouseenter(function(){
+					$("#d01").animate({
+						"background-color":"#efefef",
+						"border-radius":"150px"});
+				});
+				
+				$("#btn02").click(function(){
+	//				$("img").animate({"right":"300px", "width":"200px"});
+					$("img").stop().fadeTo("fast", 0.2);
+				});
+				
+				$("#btn03").click(function(){
+					$("img").animate({"top":"300px", "width":"300px"});
+				});
+			});
+		</script>
+		
+		<style type="text/css">
+			div{
+				position: relative;
+				width: 600px;
+				margin: 50px auto;
+			}
+			#d01{
+				width:300px;
+				height: 300px;
+				border:3px solid #8000ff;
+				background: #ffff80;
+			}
+			
+			img{
+				position:relative;
+				left:0px;
+				width: 600px;
+				border:3px solid #ff0080;
+			}
+		</style>
+	
+	</head>
+	<body>
+		<div>
+			<img alt="" src="images/puppy.jpg">
+			<div id="d01"></div>
+			<p>버튼을 클릭하면 이미지 크기가 변경됩니다.</p>
+			<button id="btn01">이미지 100픽셀</button>
+			<button id="btn02">이미지 200픽셀</button>
+			<button id="btn03">이미지 300픽셀</button>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/prefixfree.dynamic-dom.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+	
+				$("#btn01").click(function(){
+					$("ul li").toggleClass("on");  //toggle: 한번 누르면 들어오고 다시 한번 누르면 빠지고
+					$("p").text("밑줄이 들어갔습니다.");
+					$("#img01").fadeToggle();
+				});
+			
+				
+	//			$("#btn01").click(function(){
+	//				$("ul li").addClass("on");
+	//				$("p").text("밑줄이 들어갔습니다.");
+	//			});
+			//	
+	//			$("#btn02").click(function(){
+	//				$("ul li").removeClass("on");
+	//				$("p").text("밑줄이 사라졌습니다.");
+	//			});
+	
+				
+				$("ul li").mouseenter(function(){
+					$(this).animate({"background-color":"#efefef"});
+	//				$(this).addClass("on");
+					$("p").text("밑줄이 들어갔습니다.");
+				});
+			//	
+// 				$("ul li").mouseleave(function(){
+	//				$(this).removeClass("on");
+	//				$("p").text("밑줄이 들어갔습니다.");
+// 				});
+				
+			});		
+		</script>
+		
+		<style type="text/css">
+			*{padding:0; margin:0;}
+			div{ 
+				width: 100%;
+				height: 80px;
+				background: white;
+				border-bottom: 1px solid #606060;
+				box-sizing: border-box;
+			}
+			
+			ul{
+				list-style-type: none;
+				box-sizing: border-box;
+				width: 1100px;
+				margin: 0 auto;
+			}
+			
+			ul li{
+				width: 211px;
+				height: 80px;
+				box-sizing: border-box;
+				font-size: 22px;
+				color: #101010;
+				line-height:32px;
+				float: left;
+				text-align: center;
+				padding-top: 24px;
+			}
+			
+			.on{
+				border-bottom:3px solid #ff5a2b;
+				background: #efefef;
+				cursor: pointer;
+			}
+			
+			img{width:200px;}		
+		</style>
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li>COOKIT소개</li>
+				<li>COOKIT메뉴</li>
+				<li>COOKIT리뷰</li>
+				<li>COOKIT이벤트</li>
+				<li>MY쿡킷</li>
+			</ul>
+		</div>
+		<p></p>
+		<img id="img01" alt="" src="images/cat01.jpg">
+		<button id="btn01">메뉴밑줄넣기</button>
+		<button id="btn02">메뉴밑줄빼기</button>
+	</body>
+</html>

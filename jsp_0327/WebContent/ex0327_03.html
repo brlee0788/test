@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/prefixfree.dynamic-dom.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			
+				$("#d02").click(function(){
+					var w1 = $(this).width();               
+					$("#d01").height(w1);   			 // div 클릭하면 #d02의 width 사이즈가 #d01의 height 사이즈로 변경됨
+					$("p").text("div의 넓이가 변경되었습니다.");
+				});
+			});
+		</script>
+		
+		<style type="text/css">
+			#d01{
+				width: 300px; height: 300px;
+				margin: 30px auto;
+				border: 2px solid red;
+				background: yellow;
+			}
+			
+			#d02{
+				width: 500px; height: 500px;
+				margin: 30px auto;
+				border: 2px solid brown;
+				background: green;
+			}
+			
+			p{
+				font-size: 20px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="d01">
+			<p></p>
+		</div>
+		
+		<div id="d02">
+			<p></p>
+		</div>
+	
+	</body>
+</html>

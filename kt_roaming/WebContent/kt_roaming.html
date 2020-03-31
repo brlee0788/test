@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<link type="text/css" rel="stylesheet" href="css/kt_style.css">
+		<script type="text/javascript" src="js/kt_custom.js"></script>
+	</head>
+	<body>
+		<form action="" name="form" method="get">
+			<table id="tb1">
+				<tr>
+					<th rowspan="2">Prepaid Data SIM</th>
+					<td><input type="checkbox" name="p_data" value="6600" id="p_6600" class="btn"><label for="p_6600">￦6,600 1일(24시간)</label></td>
+					<td><input type="checkbox" name="p_data" value="27500" id="p_27500" class="btn"><label for="p_27500">￦27,500 5일(120시간)</label></td>
+					<td><input type="checkbox" name="p_data" value="38500" id="p_38500" class="btn"><label for="p_38500">￦38,500 10일(240시간)</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="p_data" value="60500" id="p_60500" class="btn"><label for="p_60500">￦60,500 20일(480시간)</label></td>
+					<td><input type="checkbox" name="p_data" value="71500" id="p_71500" class="btn"><label for="p_71500">￦71,500 30일(720시간)</label></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<th rowspan="2">Prepaid SIM</th>
+					<td><input type="checkbox" name="pre" value="6600" id="pre_6600" class="btn"><label for="pre_6600">￦6,600 1일(24시간)</label></td>
+					<td><input type="checkbox" name="pre" value="27500" id="pre_27500" class="btn"><label for="pre_27500">￦27,500 5일(120시간)</label></td>
+					<td><input type="checkbox" name="pre" value="38500" id="pre_38500" class="btn"><label for="pre_38500">￦38,500 10일(240시간)</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="pre" value="60500" id="pre_60500" class="btn"><label for="pre_60500">￦60,500 20일(480시간)</label></td>
+					<td><input type="checkbox" name="pre" value="71500" id="pre_71500" class="btn"><label for="pre_71500">￦71,500 30일(720시간)</label></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<th>Postpaid SIM</th>
+					<td><input type="checkbox" name="post" value="27500" id="post_6600" class="btn"><label for="post_6600">￦27,500 (5일권)</label></td>
+					<td><input type="checkbox" name="post" value="27500" id="post_38500" class="btn"><label for="post_38500">￦38,500 (10일권)</label></td>
+					<td><input type="checkbox" name="post" value="38500" id="post_71500" class="btn"><label for="post_71500">￦71,500 (30일권)</label></td>
+				</tr>
+				
+				<tr>
+					<th>기타상품</th>
+					<td><input type="checkbox" name="etc" value="wifi" id="wifi" class="btn"><label for="wifi">WiFi Router</label></td>
+					<td><input type="checkbox" name="etc" value="phone" id="phone" class="btn"><label for="phone">휴대폰</label></td>
+					<td><input type="checkbox" name="etc" value="battery" id="battery" class="btn"><label for="battery">보조베터리</label></td>
+				</tr>
+			</table>
+		</form>
+		
+		<table id="tb2">
+			<colgroup>
+				<col width="37%">
+				<col width="16%">
+				<col width="auto">
+				<col width="9.71%">
+				<col width="13.45%">
+				<col width="7.47%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th>상품</th>
+					<th>이용요금</th>
+					<th>임대기간요금</th>
+					<th>수량</th>
+					<th>합계</th>
+					<th>삭제</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="add_t">
+					<td>Prepaid Data SIM 1일(24시간) 1<br>
+					<p>본 상품은 <span>1</span>일 동안 이용 가능합니다.</p></td>
+					<td>6,600 원 / 1개</td>
+					<td>-</td>
+					<td>
+					  <form action="" name="amount1" method="get">
+						<select name="6600" class="DPrSim4" id="dp1">
+							<option value>선택</option>
+							<option value="1">1개</option>
+							<option value="2">2개</option>
+							<option value="3">3개</option>
+						</select>
+					  </form>
+					</td>
+					<td><span id="add_01" class="sum">0</span>원</td>
+					<td><img src="images/btn_close.gif" class="del"></td>
+				</tr>
+				
+				<tr class="add_t">
+					<td>Prepaid Data SIM 5일(120시간) 2<br>
+					<p>본 상품은 <span>5</span>일 동안 이용 가능합니다.</p></td>
+					<td>27,500 원 / 1개</td>
+					<td>-</td>
+					<td>
+					  <form action="" name="amount2" method="get">
+						<select name="27500" class="DPrSim4" id="dp2">
+							<option value>선택</option>
+							<option value="1">1개</option>
+							<option value="2">2개</option>
+							<option value="3">3개</option>
+						</select>
+					  </form>
+					</td>
+					<td><span id="add_02" class="sum">0</span>원</td>
+					<td><img src="images/btn_close.gif" class="del"></td>
+				</tr>
+			
+				<tr class="add_t">
+					<td>Prepaid Data SIM 10일(240시간) 3<br>
+					<p>본 상품은 <span>10</span>일 동안 이용 가능합니다.</p></td>
+						<td>38,500 원 / 1개</td>
+					<td>-</td>
+					<td>
+					  <form action="" name="amount3" method="get">
+						<select name="38500" class="DPrSim4" id="dp3">
+							<option value>선택</option>
+							<option value="1">1개</option>
+							<option value="2">2개</option>
+							<option value="3">3개</option>
+						</select>
+					  </form>
+					</td>
+					<td><span id="add_03" class="sum">0</span>원</td>
+					<td><img src="images/btn_close.gif" class="del"></td>
+				</tr>		
+				
+				<tr class="add_t">
+					<td>Prepaid Data SIM 20일(480시간) 4<br>
+					<p>본 상품은 <span>20</span>일 동안 이용 가능합니다.</p></td>
+						<td>60,500 원 / 1개</td>
+					<td>-</td>
+					<td>
+					  <form action="" name="amount4" method="get">
+						<select name="60500" class="DPrSim4" id="dp4">
+							<option value>선택</option>
+							<option value="1">1개</option>
+							<option value="2">2개</option>
+							<option value="3">3개</option>
+						</select>
+					  </form>
+					</td>
+					<td><span id="add_04" class="sum">0</span>원</td>
+					<td><img src="images/btn_close.gif" class="del"></td>
+				</tr>	
+				
+				<tr class="add_t">
+					<td>Prepaid Data SIM 30일(720시간) 5<br>
+					<p>본 상품은 <span>30</span>일 동안 이용 가능합니다.</p></td>
+						<td>71,500 원 / 1개</td>
+					<td>-</td>
+					<td>
+					  <form action="" name="amount5" method="get">
+						<select name="71500" class="DPrSim4" id="dp5">
+							<option value>선택</option>
+							<option value="1">1개</option>
+							<option value="2">2개</option>
+							<option value="3">3개</option>
+						</select>
+					  </form>
+					</td>
+					<td><span id="add_05" class="sum">0</span>원</td>
+					<td><img src="images/btn_close.gif" class="del"></td>
+				</tr>	
+			</tbody>
+			
+			<tfoot>
+				<tr>
+					<td>이용요금합계 <span>A</span><br>
+					<span>( 1 )</span></td>
+					<td colspan="4"><span id="total">0</span>원</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>할인금액 <span>B</span></td>
+					<td colspan="4"><span class="discount">* 온라인 예약 할인</span><span>-0</span> 원</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>이용금액총액 <span>A</span>-<span>B</span><br>
+					<span>*원화(KRW)로 결제되며 결제 시점의 환율이 적용됩니다.</span>
+					<td colspan="4"><span>0</span> 원</td>
+					<td></td>
+				</tr>
+			</tfoot>
+		
+		</table>
+		
+	</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<link type="text/css" rel="stylesheet" href="css/form_table.css">
+		<script type="text/javascript" src="js/form_table.js"></script>
+	</head>
+	<body>
+		<form action="" name="form" method="get">
+			<table id="form_t">
+				<tr>
+					<th rowspan="2">Prepaid Data SIM</th>
+					<td><input type="checkbox" name="pre_data" value="6600" id="pred_6600" class="btntt"><label for="pred_6600">￦6,600 1일(24시간)</label></td>
+					<td><input type="checkbox" name="pre_data" value="27500" id="pred_27500" class="btntt"><label for="pred_27500">￦27,500 5일(120시간)</label></td>
+					<td><input type="checkbox" name="pre_data" value="38500" id="pred_38500" class="btntt"><label for="pred_38500">￦38,500 10일(240시간)</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="pre_data" value="60500" id="pred_60500" class="btntt"><label for="pred_60500">￦60,500 20일(480시간)</label></td>
+					<td><input type="checkbox" name="pre_data" value="71500" id="pred_71500" class="btntt"><label for="pred_71500">￦71,500 30일(720시간)</label></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="2">Prepaid SIM</th>
+					<td><input type="checkbox" name="pre" value="6600" id="pre_6600" class="btntt"><label for="pre_6600">￦6,600 1일(24시간)</label></td>
+					<td><input type="checkbox" name="pre" value="27500" id="pre_27500" class="btntt"><label for="pre_27500">￦27,500 5일(120시간)</label></td>
+					<td><input type="checkbox" name="pre" value="38500" id="pre_38500" class="btntt"><label for="pre_38500">￦38,500 10일(240시간)</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="pre" value="60500" id="pre_60500" class="btntt"><label for="pre_60500">￦60,500 20일(480시간)</label></td>
+					<td><input type="checkbox" name="pre" value="71500" id="pre_71500" class="btntt"><label for="pre_71500">￦71,500 30일(720시간)</label></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>Postpaid SIM</th>
+					<td><input type="checkbox" name="post" value="27500" id="post_27500" class="btntt"><label for="post_27500">￦27,500 (5일권)</label></td>
+					<td><input type="checkbox" name="post" value="38500" id="post_38500" class="btntt"><label for="post_38500">￦38,500 (10일권)</label></td>
+					<td><input type="checkbox" name="post" value="71500" id="post_71500" class="btntt"><label for="post_71500">￦71,500 (30일권)</label></td>
+				</tr>
+				<tr>
+					<th>기타상품</th>
+					<td><input type="checkbox" name="etc" value="wifi" id="wifi" class="btntt"><label for="wifi">WiFi Router</label></td>
+					<td><input type="checkbox" name="etc" value="phone" id="phone" class="btntt"><label for="phone">휴대폰</label></td>
+					<td><input type="checkbox" name="etc" value="battery" id="battery" class="btntt"><label for="battery">보조배터리</label></td>
+				</tr>
+			</table>
+		</form>
+		<table id="sum_t">
+			<colgroup>
+				<col width="30%">
+				<col width="15%">
+				<col width="15%">
+				<col width="15%">
+				<col width="15%">
+				<col width="10%">
+			</colgroup>
+			<thead>
+			<tr>
+				<th>상품</th>
+				<th>이용요금</th>
+				<th>임대기간요금</th>
+				<th>수량</th>
+				<th>합계</th>
+				<th>삭제</th>
+			</tr>
+			</thead>
+			<tbody>
+				<tr class="h_table">
+					<td>Prepaid Data SIM 1일(24시간) 1<br>
+					본 상품은 <span>1</span>일 동안 이용 가능합니다.</td>
+					<td>6,600 원 / 1개</td>
+					<td>-</td>
+					<td>선택</td>
+					<td>0 원</td>
+					<td class="btntt2">x</td>
+				</tr>
+				<tr class="h_table">
+					<td>Prepaid Data SIM 5일(120시간) 2<br>
+					본 상품은 <span>5</span>일 동안 이용 가능합니다.</td>
+					<td>27,500 원 / 1개</td>
+					<td>-</td>
+					<td>선택</td>
+					<td>0 원</td>
+					<td class="btntt2">x</td>
+				</tr>
+				<tr class="h_table">
+					<td>Prepaid Data SIM 10일(240시간) 3<br>
+					본 상품은 <span>10</span>일 동안 이용 가능합니다.</td>
+					<td>38,500 원 / 1개</td>
+					<td>-</td>
+					<td>선택</td>
+					<td>0 원</td>
+					<td class="btntt2">x</td>
+				</tr>
+				<tr class="h_table">
+					<td>Prepaid Data SIM 20일(480시간) 4<br>
+					본 상품은 <span>20</span>일 동안 이용 가능합니다.</td>
+					<td>60,500 원 / 1개</td>
+					<td>-</td>
+					<td>선택</td>
+					<td>0 원</td>
+					<td class="btntt2">x</td>
+				</tr>
+				<tr class="h_table">
+					<td>Prepaid Data SIM 30일(720시간) 5<br>
+					본 상품은 <span>30</span>일 동안 이용 가능합니다.</td>
+					<td>71,500 원 / 1개</td>
+					<td>-</td>
+					<td>선택</td>
+					<td>0 원</td>
+					<td class="btntt2">x</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>이용요금합계 A<br>
+					( 1 )</td>
+					<td colspan="5">원</td>
+				</tr>
+				<tr>
+					<td>할인금액 B</td>
+					<td colspan="5"><span class="left">* 온라인 예약 할인</span>원</td>
+				</tr>
+				<tr>
+					<td>이용요금총액 A - B<br>
+					<span>*원화(KRW)로 결제되며 결제 시점의 환율이 적용됩니다.</span></td>
+					<td colspan="5">원</td>
+				</tr>
+			</tfoot>
+		</table>
+	</body>
+</html>

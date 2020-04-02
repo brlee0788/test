@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<form action="ex0402_01.jsp" name="login" method="post">
+			<label for="id">아이디</label>
+			<input type="text" name="id" id="id"><br>
+			<label for="pw">패스워드</label>
+			<input type="password" name="pw" id="pw"><br>
+			<label for="name">이름</label>
+			<input type="text" name="name" id="name"><br>
+			<p>취미</p>
+			<input type="checkbox" name="hobby" id="hobby1" value="read">
+			<label for="hobby1">독서</label>
+			<input type="checkbox" name="hobby" id="hobby2" value="cook">
+			<label for="hobby2">요리</label>
+			<input type="checkbox" name="hobby" id="hobby3" value="run">
+			<label for="hobby3">조깅</label>
+			<input type="checkbox" name="hobby" id="hobby4" value="swim">
+			<label for="hobby4">수영</label><br>
+			<p>전공</p>
+			<input type="radio" name="major" id="major1" value="kor">
+			<label for="major1">국어국문학과</label>
+			<input type="radio" name="major" id="major2" value="eng">
+			<label for="major2">영어영문학과</label>
+			<input type="radio" name="major" id="major3" value="math">
+			<label for="major3">수학과</label>
+			<input type="radio" name="major" id="major4" value="design">
+			<label for="major4">디자인학과</label><br>
+			
+			<p>주소</p>
+			<select name="address">
+				<option value="seoul">서울</option>
+				<option value="busan">부산</option>
+				<option value="incheon">인천</option>
+			</select><br>
+			
+			<input type="submit" value="전송">
+			<!-- 
+			<input type="button" onclick="" value="전송">
+			 -->
+			<input type="reset" value="취소">
+		</form>
+	</body>
+</html>

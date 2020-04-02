@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			table{width:700px; border-collapse: collapse;
+				  border: 1px solid black; font-size: 14px;
+				  margin-bottom: 10px;}
+			tr, td{border: 1px solid black;}
+			td{padding-left: 5px; height:40px;}
+			td:first-child {width: 200px;  font-weight: bold; background: #efefef;}
+		</style>
+		<script type="text/javascript">
+			function pw_chk(){
+				if(!(pw.value==pw2.value)){
+					alert("비밀번호가 일치하지 않습니다.");
+					pw.value="";
+					pw2.value="";
+					pw.focus();
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form action="ex0402_02.jsp" name="join" method="get">
+			<table> 
+				<tr>
+					<td>이름</td>
+					<td><input type="text" name="name" id="j_name"></td>
+				</tr>
+				<tr>
+					<td>아이디</td>
+					<td><input type="text" name="id" id="j_id"></td>
+				</tr>
+				<tr>
+					<td>비밀번호</td>
+					<td><input type="password" name="pw" id="j_pw"></td>
+				</tr>
+				<tr>
+					<td>비밀번호 확인</td>
+					<td>
+						<input type="password" name="pw2" id="j_pw2"> 
+						<input type="button" onclick="pw_chk()" value="비밀번호 확인">
+					</td>
+				</tr>
+				<tr>
+					<td>휴대전화</td>
+					<td><input type="text" name="phone" id="j_phone"></td>
+				</tr>
+				<tr>
+					<td>직업</td>
+					<td>
+						<select name="job">
+							<option value="student">학생</option>
+							<option value="office">회사원</option>
+							<option value="self">자영업자</option>
+							<option value="housekeeper">전업주부</option>
+							<option value="etc">기타</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>결혼여부</td>
+					<td>
+						<input type="radio" name="marital_s" id="yes" value="yes"><label for="yes">예</label>
+						<input type="radio" name="marital_s" id="no" value="no"><label for="no">아니오</label>
+					</td>
+				</tr>
+				<tr>
+					<td>관심사</td>
+					<td>
+						<input type="checkbox" name="interest" id="computer" value="computer"><label for="computer">컴퓨터/인터넷</label>
+						<input type="checkbox" name="interest" id="movie" value="movie"><label for="movie">영화/비디오</label>
+						<input type="checkbox" name="interest" id="music" value="music"><label for="music">음악</label>
+						<input type="checkbox" name="interest" id="shopping" value="shopping"><label for="shopping">쇼핑</label>
+						<input type="checkbox" name="interest" id="culture" value="culture"><label for="culture">문화/예술</label><br>
+						<input type="checkbox" name="interest" id="cook" value="cook"><label for="cook">요리</label>
+						<input type="checkbox" name="interest" id="interior" value="interior"><label for="interior">인테리어</label>
+						<input type="checkbox" name="interest" id="leisure" value="leisure"><label for="leisure">레저/여가</label>
+						<input type="checkbox" name="interest" id="health" value="health"><label for="health">건강/다이어트</label>
+					</td>
+				</tr>
+			</table>
+			<input type="submit" value="전송">
+			<input type="reset" value="취소">
+		</form>
+	
+	
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			function chk(){
+				if(form.start.value==""){
+					alert("시작값을 입력해주세요.");
+					form.start.focus();
+					return false;
+				}else if(form.end.value==""){
+					alert("종료값을 입력해주세요.");
+					form.end.focus();
+					return false;
+				}
+				
+							
+				if(Number(form.start.value)>Number(form.end.value)){
+					alert("시작값은 종료값 보다 작아야 합니다.");
+					form.start.value="";
+					form.end.value="";
+					form.start.focus();
+					return false;
+				}
+					return form.submit();
+			}
+		</script>
+	</head>
+	<body>
+		<form action="ex0403_01_01.jsp" name="form" method="get">
+			<h2>[범위]</h2>
+			<label for="start">시작값</label>
+			<input type="text" name="start" id="start"><br>
+			<label for="end">종료값</label>
+			<input type="text" name="end" id="end"><br>
+			<input type="button" onclick="chk()" value="계산"> 
+		</form>
+	</body>
+</html>

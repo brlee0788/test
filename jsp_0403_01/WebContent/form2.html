@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			function chk(){
+				if(form.hak_num.value==""){
+					alert("학번을 입력하세요.")
+					form.hak_num.focus();
+					return false;
+				}else if(form.name.value==""){
+					alert("이름을 입력하세요.")
+					form.name.focus();
+					return false;
+				}else if(form.kor.value==""){
+					alert("국어 점수를 입력하세요.")
+					form.kor.focus();
+					return false;
+				}else if(form.eng.value==""){
+					alert("영어 점수를 입력하세요.")
+					form.eng.focus();
+					return false;
+				}else if(form.math.value==""){
+					alert("수학 점수를 입력하세요.")
+					form.math.focus();
+				return false;
+				}
+				return form.submit();
+			}
+		
+		</script>
+	</head>
+	<body>
+		<form action="ex0403_02.jsp" name="form" method="get">
+			<label for="hak_num">학번</label>
+			<input type="text" name="hak_num" id="hak_num"><br>
+			<label for="name">이름</label>
+			<input type="text" name="name" id="name"><br>
+			<label for="kor">국어</label>
+			<input type="text" name="kor" id="kor"><br>
+			<label for="eng">영어</label>
+			<input type="text" name="eng" id="eng"><br>
+			<label for="math">수학</label>
+			<input type="text" name="math" id="math"><br>
+			
+			<input type="button" onclick="chk()" value="저장">	
+		
+		</form>
+	
+	</body>
+</html>

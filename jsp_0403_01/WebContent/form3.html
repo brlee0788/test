@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function check(){
+		if(form.name.value==""){
+			alert("이름을 입력하세요.");
+			form.name.focus();
+			return false;
+		}
+		return form.submit();
+	}
+</script>
+</head>
+<body>
+	<form action="ex0403_05.jsp" name="form" method="get">
+		이름<input type="text" name="name"><br>
+		아이디<input type="text" name="id"><br>
+		패스워드<input type="text" name="pw"><br>
+		<p>취미</p>
+			<input type="checkbox" name="hobby" value="cook">요리
+			<input type="checkbox" name="hobby" value="run">조깅
+			<input type="checkbox" name="hobby" value="read">독서
+			<input type="checkbox" name="hobby" value="swin">수영<br>
+		<p>전공</p>
+			<input type="radio" name="major" value="kor">국어국문학과
+			<input type="radio" name="major" value="eng">영어영문학과
+			<input type="radio" name="major" value="math">수학과
+			<input type="radio" name="major" value="design">디자인학과<br>
+		<p>주소</p>
+			<select name="address">
+				<option value="seoul">서울</option>
+				<option value="gyeonggi">경기</option>
+				<option value="busan">부산</option>
+				<option value="incheon">인천</option>
+			</select><br>
+			<input type="button" onclick="check()" value="전송">
+			<input type="reset" value="취소">
+	</form>
+</body>
+</html>

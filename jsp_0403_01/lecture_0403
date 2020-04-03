@@ -1,0 +1,15 @@
+set: 순서 없고 중복도 안됨 -> for문을 사용할 수 없음 -> iterator를 만들고 .hasNext() 사용해서 다음 요소가 있는지 확인해서 출력, .next() 다음 요소를 가져오는 것
+	 Set s = new set();
+	 Iterator it = s.iterator();
+	 while(it.hasNext()){
+	 	System.out.println(it.next());
+	 }
+list: 순서도 있고 중복도 가능
+map: 순서가 없음
+
+[getParameterNames()]
+-> 순서 없는 객체 
+
+[MVC]
+웹에서 값을 입력 받으면 우선 Controller(Servlet)에 요청이 되고 
+Servlet에서 분기를 해줌

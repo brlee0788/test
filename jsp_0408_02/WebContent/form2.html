@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			function chk(){
+				
+				var name_chk = /^[가-힣]*$/;
+				var id_chk = (/(?=.*[a-zA-Z])(?=.*[0-9]).{1,}$/);
+				var pw_chk = (/(?=.*[0-9])(?=.*[!@#$%^&*()_+|<>?]).{1,}$/);
+				
+				if(form2.name.value==""){
+					alert("이름을 입력하세요.");
+					form2.name.focus();
+					return false;
+				}
+				
+				if(!(name_chk.test(form2.name.value))){
+					alert("이름은 한글만 입력 가능합니다.");
+					form2.name.value="";
+					form2.name.focus();
+					return false;
+				}
+				
+				if(form2.id.value==""){
+					alert("아이디를 입력하세요.");
+					form2.id.focus();
+					return false;
+				}
+				
+				if(!(id_chk.test(form2.id.value))){
+					alert("아이디에는 대소문자와 숫자가1개 이상씩 포함되어야 합니다.");
+					form2.id.value="";
+					form2.id.focus();
+					return false;
+				}
+				
+				if(form2.pw.value==""){
+					alert("패스워드를 입력하세요.");
+					form2.pw.focus();
+					return false;
+				}
+				
+				if(!(pw_chk.test(form2.pw.value))){
+					alert("패스워드에는 특수문자와 숫자가 1개 이상씩 포함되어야 합니다.");
+					form2.pw.value="";
+					form2.pw.focus();
+					return false;
+				}
+				
+				if(!(form2.pw.value==form2.pw2.value)){
+					alert("비밀번호가 일치하지 않습니다. 비밀번호를 다시 확인해주세요.");
+					form2.pw.value="";
+					form2.pw2.value="";
+					form2.pw.focus();
+					return false;
+				}
+				
+				if(form2.gender.value==""){
+					alert("성별을 선택하세요.");
+					form2.gender.focus();
+					return false;
+				}
+				
+				if(form2.address.value=="null"){
+					alert("주소를 선택하세요.");
+					form2.address.focus();
+					return false;
+				}
+				
+				return form2.submit();
+			}
+		</script>
+	</head>
+	<body>
+		<!-- 이름,아이디,패스워드,패스워드 확인, 성별, 주소   
+		     ex0408_03.jsp 에서 출력 (자바 빈 태그 사용) -->
+		
+		<form action="ex0408_03.jsp" name="form2" method="post">
+			이름: <input type="text" name="name"><br>
+			아이디: <input type="text" name="id"><br>
+			패스워드: <input type="password" name="pw"><br>
+			패스워드 확인: <input type="password" name="pw2"><br>
+			<p>성별</p> 
+			<input type="radio" name="gender" value="male">남성
+			<input type="radio" name="gender" value="female">여성<br>
+			<p>주소</p>
+			<select name="address">
+				<option value="null">선택</option>
+				<option value="seoul">서울</option>
+				<option value="gyeonggi">경기</option>
+				<option value="busan">부산</option>
+				<option value="incheon">인천</option>
+			</select><br>
+			<input type="button" onclick="chk()" value="저장"><input type="reset" value="취소">
+		</form>
+	</body>
+</html>

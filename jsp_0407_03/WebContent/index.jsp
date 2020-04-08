@@ -25,8 +25,12 @@
 	<body>
 		
 		<%
-			if(request.isRequestedSessionIdValid()){
+			String s_user = (String)session.getAttribute("auth_User");
+			if(s_user !=null){
 				String nick_name = (String)session.getAttribute("nick_name");
+			
+// 			if(request.isRequestedSessionIdValid()){
+// 				String nick_name = (String)session.getAttribute("nick_name");
 					
 		%>
 				<div class="log_box2">

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			function check(){
+				if(login.id.value==""){
+					alert("아이디를 입력하세요.");
+					login.id.focus();
+					return false;
+				}
+				if(login.pw.value==""){
+					alert("비밀번호를 입력하세요.");
+					login.pw.focus();
+					return false;
+				}
+				return login.submit();
+			}
+		</script>
+		<style type="text/css">
+			h1{color:#03C75A; font-size:80px; font-weight: bold; text-align: center;}
+			div{width: 460px; height: 120px; margin:0 auto;}
+			div>form>input{width: 460px; height: 51px; box-sizing:border-box;
+						   padding:10px 35px 10px 15px;
+						   margin-bottom: 14px;}
+			div>form>input:nth-child(3){background:#03C75A; font-size: 30px; color: white;
+						 				width: 460px; height: 51px; margin: 0 auto; margin-top:20px;}	
+		</style>
+	</head>
+	<body>
+		<h1>NAVER</h1>
+		<div>
+			<form action="Login_ok" name="login" method="post">
+				<input type="text" name="id" placeholder="아이디">
+				<input type="password" name="pw" placeholder="비밀번호"> <br>
+				<input type="button" onclick="check()" value="로그인">
+			</form>
+		</div>
+		
+	
+	</body>
+</html>

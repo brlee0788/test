@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			input{margin: 5px 0px;}
+		</style>
+		<script type="text/javascript">
+			function chk(){
+				var id_chk = /^[a-zA-Z0-9]+$/;
+				var pw_chk = (/(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+|<>?]).{3,}$/);
+				var name_chk = /^[가-힣]+$/;
+				var phone_chk = /^[0-9]+$/;
+				
+				if(join.id.value==""){
+					alert("아이디를 입력하세요.");
+					join.id.focus();
+					return false;
+				}
+				
+				if(!(id_chk.test(join.id.value))){
+					alert("아이디는 영문 대소문자와 숫자만 입력 가능합니다.");
+					join.id.value="";
+					join.id.focus();
+					return false;
+				}
+				
+				if(join.pw.value==""){
+					alert("패스워드를 입력하세요.");
+					join.pw.focus();
+					return false;
+				}
+				
+				if(!(pw_chk.test(join.pw.value))){
+					alert("패스워드에는 영문 대소문자, 숫자, 특수문자가 각각 1개이상씩 입력되어야 합니다.");
+					join.pw.value="";
+					join.pw.focus();
+					return false;
+				}
+				
+				if(join.pw2.value==""){
+					alert("패스워드 확인을 위해 다시 한번 입력하세요.");
+					join.pw2.focus();
+					return false;
+				}
+				
+				if(!(join.pw.value==join.pw2.value)){
+					alert("패스워드가 일치하지 않습니다.");
+					join.pw.value="";
+					join.pw2.value="";
+					join.pw.focus();
+					return false;
+				}
+				
+				if(join.name.value==""){
+					alert("이름을 입력하세요.");
+					join.name.focus();
+					return false;
+				}
+				
+				if(!(name_chk.test(join.name.value))){
+					alert("이름에는 한글만 입력 가능합니다.");
+					join.name.value="";
+					join.name.focus();
+					return false;
+				}
+				
+				if(join.phone2.value==""){
+					alert("전화번호를 입력하세요.");
+					join.phone2.focus();
+					return false;
+				}
+				
+				if(join.phone3.value==""){
+					alert("전화번호를 입력하세요.");
+					join.phone3.focus();
+					return false;
+				}
+				
+				if(!(phone_chk.test(join.phone2.value)) || !(phone_chk.test(join.phone3.value))){
+					alert("전화번호에는 숫자만 입력 가능합니다.");
+					join.phone2.value="";
+					join.phone3.value="";
+					join.phone2.focus();
+					return false;
+				}
+				
+				if(join.gender.value==""){
+					alert("성별을 선택하세요.");
+					join.gender.focus();
+					return false;
+				}
+				
+				return join.submit();
+			}
+		</script>
+	</head>
+	<body>
+		<form action="JoinOk" name="join" method="post">
+			<h2>회원가입</h2>
+			아이디: <input type="text" name="id" autofocus> *아이디는 영문, 숫자만 입력이 가능합니다.<br>
+			패스워드: <input type="password" name="pw"><br>
+			패스워드 확인: <input type="password" name="pw2"><br>
+			이름: <input type="text" name="name"><br>
+			전화번호: <select name="phone1">
+					<option value="010">010</option>
+					<option value="016">016</option>
+					<option value="017">017</option>
+					<option value="018">018</option>
+					<option value="019">019</option>
+					<option value="011">011</option>
+					</select>
+					<input type="text" name="phone2"> - 
+					<input type="text" name="phone3"><br>
+			성별: <input type="radio" name="gender" value="남자" id="man"><label for="man">남자</label>
+				 <input type="radio" name="gender" value="여자" id="woman"><label for="woman">여자</label><br>
+			<input type="button" onclick="chk()" value="회원가입"> <input type="reset" value="취소">	 
+				 
+		</form>
+	</body>
+</html>

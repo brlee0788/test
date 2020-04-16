@@ -69,6 +69,7 @@ public class Modify_ok extends HttpServlet {
 					writer.println("<script>alert('비밀번호가 잘못되었습니다. 다시 입력해주세요.');");
 					writer.println("history.go(-1);</script>");
 					writer.println("</body></html>");
+					writer.close();
 				}
 				
 			} catch (Exception e) {
@@ -94,6 +95,7 @@ public class Modify_ok extends HttpServlet {
 			writer.println("<script>alert('비밀번호가 잘못되었습니다. 다시 입력해주세요.');");
 			writer.println("location.href='modify.jsp';</script>");
 			writer.println("</body></html>");
+			writer.close();
 		
 		}
 	}

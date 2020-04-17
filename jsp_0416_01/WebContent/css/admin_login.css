@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+body{
+	background: #efefef;
+}
+
+ul,ol{
+	list-style: none;
+	width: 100%;
+}
+li{
+	float: left;
+	margin-right: 20px;
+}
+section{
+	margin: 200px auto;
+	width:900px;
+	height:450px;
+	line-height: 160%;
+}
+
+section>h1{
+	margin: 10px auto;
+	width:750px;
+	text-align: left;
+	font-size: 25px;
+}
+
+section>div{
+	border: 1px solid #ddd;
+	background: white;
+}
+
+section>div>h1{
+	text-align: center;
+	color: black;
+	font-size: 30px;
+	margin: 50px 0;
+}
+span{
+	color: red;
+}
+section>div{
+	margin: 0 auto;
+	width:750px;
+	height:430px;
+	position: relative;
+}
+section>div:after{
+	position: absolute;
+	width:100%;
+	height:100%;
+	background: url("../images/3434213.jpg") no-repeat;
+	background-size: 100%;
+	opacity: 0.6;
+}
+section>div>p{
+	width:600px;
+	margin:25px auto 0;
+	color: #848484;
+	font-size: 12px;
+}
+#login_div{
+	margin:0 auto;
+	padding: 40px 0;
+	box-sizing: border-box;
+	width:600px;
+	height:200px;
+	border-top: 2px solid #666;
+	border-bottom: 1px solid #666;
+}
+
+#login_div ul{
+	margin: 0 0;
+	padding: 0 0 ;
+	width:100%;
+	height:100%;
+	text-align: left;
+}
+
+#img_div{
+	background: url("../images/lock.png") center center no-repeat;
+	background-size:130px 130px;
+	float:left;
+	width: 31%;
+	height: 130px;
+}
+#input_div{
+	width: 45%;
+	box-sizing:border-box;
+}
+#btn_div{
+	width: 10%;
+}
+#input_div label:nth-child(1) input{
+	background: url("../images/bg_user.gif")96% 48% no-repeat;
+}
+#input_div label:nth-child(3) input{
+	background: url("../images/bg_pw.gif") 96% 48% no-repeat;
+}
+
+#input_div input{
+	width: 269px;
+	height: 38.5px;
+	margin-bottom: 3px;
+	font-size: 16px;
+    color: #444;
+    border: 1px #b9babd solid;	
+	padding: 8px 0 8px 17px;
+	box-sizing: border-box;
+}
+
+#input_div select{
+	line-height: 25px;
+	width:127px;
+    height: 25px;
+    padding: 3px;
+    border: 1px #c4c4c4 solid;
+    margin-top: 10px;
+    color: #666;
+    font-size: 12px;
+}
+
+#btn_div button{
+	width: 100px;
+    height: 80px;
+    background: url("../images/btn_login.png") 0 0 no-repeat;
+    border: 1px #90261b solid;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    
+}
+
+
+
+

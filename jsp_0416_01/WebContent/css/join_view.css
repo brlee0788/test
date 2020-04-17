@@ -1,0 +1,382 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+	line-height: 1.3;
+}
+a{
+	text-decoration:none;
+	
+}
+ul,ol{
+	list-style-type: none;
+}
+nav{
+	position:relative;
+	width: 100%;
+	height: 81px;
+	border-bottom: 1px solid black;
+}
+#nav_up{	
+	width:100%;
+	height:35px;
+	text-align:left; 
+	background: #202020;
+}
+#nav_up>ul{
+	width:480px;
+	height:25px;
+	list-style-type: none;
+	margin-left:10px;
+	float: right;
+	color: #fff;
+}
+#nav_up>ul>li{
+	float: left;
+	margin-right:20px;
+	font-size: 13px;
+    line-height: 32px;
+}
+nav>h1{
+	width:100px;
+	height: 30px;
+	background: url('../images/ico_set.png') -320px -385px no-repeat;
+	background-size: 800px 800px;
+	position: absolute; 
+	left: 40px;
+	top: 25px;
+}
+nav>ul:nth-child(2){
+	width: 750px;
+	height: 40px;
+	margin: 0 auto;
+	position: relative;
+	top: 23px;
+}
+nav>ul:nth-child(2) li{
+	float: left;
+	text-align: center;
+	margin-right:60px;
+    color: #101010;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+}
+nav>ul:nth-child(3) {
+	width: 300x;
+	height: 52px;
+	position: relative;
+	float: right;
+	top: -25px;
+	margin-right: 45px;
+}
+nav>ul:nth-child(3) li {
+	float: left;
+	margin-left: 25px;
+	color: #101010;
+	font-size: 12px;
+}
+nav>ul:nth-child(3)>li:nth-child(1)>a{
+	color:black;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background: url('../images/ico_set.png') no-repeat -584px -320px ;
+	background-size: 800px 800px;
+	letter-spacing: -2px;
+}
+nav>ul:nth-child(3)>li:nth-child(1)>a>span{
+	display: block;
+	width: 50px;
+	height: 20px;
+	position: relative;
+	top:32px;
+	left: -5px;
+}
+nav>ul:nth-child(3)>li:nth-child(2)>a{
+	color:black;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background: url('../images/ico_set.png') no-repeat -628px -320px ;
+	background-size: 800px 800px;
+	letter-spacing: -2px;
+}
+nav>ul:nth-child(3)>li:nth-child(2)>a>span{
+	display: block;
+	width: 50px;
+	height: 20px;
+	position: relative;
+	top:32px;
+	left: -5px;
+}
+section{
+	width: 100%;
+	height: auto;
+}
+
+section>div{
+	max-width: 1000px;
+    width: 100%;
+    margin: 0 auto 100px auto;
+}
+
+#sub_img{
+	width: 100%;
+	height: 320px;
+	background: url("../images/join_sub.jpg") no-repeat;
+	background-size: cover;
+	
+}
+#top{
+	width: 100%;
+    padding: 38px 0 0 0;
+    overflow: hidden;
+}
+#top ul{
+    float: right;
+}
+#top ul li{
+	float: left;
+    font-size: 13px;
+    color: #5c5c5c;
+    font-weight: 500;
+    line-height: 1.2;
+    padding: 0 13px 0 10px;
+	background: url("../images/bg_location.png") right 50% no-repeat;
+}
+#title{
+    text-align: center;
+	width: 100%;
+	height: 100px;
+	padding-top: 50px;
+	margin: 0 auto;
+}
+#title h3{
+	font-size: 40px;
+    font-weight: 550;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+.title_h3{
+	margin-top: 30px;
+	font-size: 20px;
+    color: #31261D;
+    font-weight: 550;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+.input_user{
+	width:100%;
+	border-top: 1px solid #d1d1d1;
+	border-collapse: collapse;
+}
+.input_user tr{
+	height: 50px;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.input_user tr th{
+	width: 20%;
+	background-color:#f6f6f6;
+	text-align: left;
+	padding-left: 20px;
+	font-size: 13px;
+	color: #555555;
+}
+
+
+.input_user tr td{
+	width: 80%;
+    padding: 10px 20px;
+	background-color: #fff;
+	font-size: 15px;
+}
+
+.input_user tr td p{
+    font-size: 13px;
+    color: #777777;
+    margin-top: 5px;
+}
+
+
+input[type='radio']{
+	border: solid 1px #c9c9c9;
+	background-color: #fff;
+	height: 16px;
+    width: 16px;
+	font-size: 12px;
+    color: #666;
+    margin-right:5px;
+	position:relative;
+	top:3px;
+}
+
+#cal{
+    margin: 7px 5px 0 0;
+}
+
+
+.input_user tr td label{
+	font-size: 13px;
+	margin-right: 20px;
+}
+
+#news_letter>td>p,#sms_letter>td>p{
+	margin-right:15px;
+	display: inline;
+}
+
+#fav ul{
+	width: 100%;
+	margin: 10px 0;
+}
+
+#fav ul li{
+	width: 126px;
+	float: left;
+    font-size: 13px;
+    color: #777777;
+    margin-bottom: 10px;
+}
+
+#join_btn{
+	text-align:center;
+	width: 100%;
+	margin-top: 30px;
+}
+
+#join_btn button{
+	width: 120px;
+    height: 50px;
+}
+
+
+#join_btn button[type='button']{
+	background: #fff;
+    color: #555;
+    font-weight: 600;
+    font-size: 16px;
+    margin-right: 10px;
+    border: solid 1px #ddd;
+    box-sizing: border-box;
+}
+
+
+
+
+footer{
+	margin: 0 auto;
+	width:100%;
+	height: 213px;
+	background: #202020;
+	padding
+}
+footer>div{
+	width: 1180px;
+    margin: 0 auto;
+    text-align: center;
+}
+#left {
+	float: left;
+    width: 300px;
+    padding-top: 36px;
+}
+#left:nth-child(1) p {
+	text-align:left;
+    padding: 45px 0 0 1px;
+    color: #808080;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: bold;
+    word-break: break-all;
+    letter-spacing: -0.5px;
+}
+#left>div>a {
+	background: url('../images/ico_set.png') -320px -320px no-repeat;
+	background-size: 800px 800px;
+	display: block;
+    width: 160px;
+    height: 48px;
+}
+#center{
+	float: left;
+    width: 650px;
+    padding-top: 32px;
+}
+#center>ul{
+	float: left;
+}
+#center>ul li{
+	float: left;
+    padding-right: 48px;
+}
+#center>ul li a{
+	color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 21px;
+}
+#center>ul li:nth-child(2) a{
+	color: #BDD61A !important;
+}
+#center_1{
+	float:left;
+	padding-top: 18px;
+    width: 642px;
+	font-weight: bold;
+}
+#center_1 p{
+	float: left;
+    margin-top: 6px;
+    padding-right: 10px;
+    color: #808080;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -1.7px;
+    
+}
+#center_1 p a{
+	text-decoration: underline;
+	color: #fff;
+}
+#right{
+	letter-spacing: -1.5px;
+	height:150px;
+	float: right;
+    padding-top: 31px;
+	text-align:right;
+    position: relative;
+}
+#right div span{
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 30px;
+}
+#right div p{
+	padding-top:20px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 30px;
+}
+#right>div>a{
+    position: absolute;
+    right: 0;
+    top:125px;
+    width: 88px;
+    border: 1px solid #ccc;
+    color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 30px;
+    text-align: center;
+}
+
